@@ -25,7 +25,7 @@ class Payload():
     def __str__(self) -> str:
         return f'{self.INITIAL_PAYLOAD}{self.CRC16}'
     
-    def salvar_qrcode(self):
+    def salvar_qrcode(self) -> None:
         self.qrcode = qrcode.make(str(payload))
         self.qrcode.save('qrcode.png')
 
